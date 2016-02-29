@@ -1,0 +1,159 @@
+
+
+<div class="container">
+
+	<h1>Spring MVC survey</h1>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Your task</h2>
+          <p>
+          We want you to evaluate the quality of the classes below. If you perceive
+          any problems, we ask you to reason about it.
+
+          <br>
+          Thanks in advance,<br>
+          Maurício Aniche (mauricioaniche at gmail dot com)
+          </p>
+        </div>
+      </div>
+
+      <%= form_tag("/save", method: "post") do %>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Profile</h2>
+          <p>
+          	What is your current position?<br>
+          	<select name="profile_position">
+          	<option value="Professional software developer">Professional software developer</option>
+          	<option value="Open Source Developer">Open Source Developer</option>
+          	<option value="Faculty">Faculty</option>
+          	<option value="PhD student">PhD student</option>
+          	<option value="Graduate student">Graduate student</option>
+          	<option value="Undergraduate student">Undergraduate student</option>
+          	</select>
+          </p>
+          <p>
+          	How many years of experience in software development do you have?<br>
+          	<select name="profile_years_experience">
+          	<option value="Less than 1 year">Less than 1 year</option>
+          	<option value="1 to 2 years">1 to 2 years</option>
+          	<option value="2 to 4 years">2 to 4 years</option>
+          	<option value="4 to 6 years">4 to 6 years</option>
+          	<option value="6 to 8 years">6 to 8 years</option>
+          	<option value="8 to 10 years">8 to 10 years</option>
+          	<option value="More than 10 years">More than 10 years</option>
+          	</select>
+          </p>
+          <p>
+          	How many years of experience in Spring MVC do you have?<br>
+          	<select name="profile_years_springmvc">
+          	<option value="Less than 1 year">Less than 1 year</option>
+          	<option value="1 to 2 years">1 to 2 years</option>
+          	<option value="2 to 4 years">2 to 4 years</option>
+          	<option value="4 to 6 years">4 to 6 years</option>
+          	<option value="6 to 8 years">6 to 8 years</option>
+          	<option value="8 to 10 years">8 to 10 years</option>
+          	<option value="More than 10 years">More than 10 years</option>
+          	</select>
+          </p>
+
+          <p>
+          How many Spring MVC applications have you put in production?<br>
+
+          <select name="profile_apps_production">
+          <option value="None">None</option>
+          <option value="1 application">1 application</option>
+          <option value="2-3 applications">2-3 applications</option>
+          <option value="3-5 applications">3-5 applications</option>
+          <option value="5-10 applications">5-10 applications</option>
+          <option value="More than 10 applications">More than 10 applications</option>
+          </select>
+          </p>
+        </div>
+      </div>
+
+      <% for i in 0..@classes.size-1 do %>
+      <input type="hidden" name="c<%= i %>_gist" value="<%=@classes[i]%>">
+      <div class="evaluation">
+	      <div class="row">
+	        <div class="col-md-12">
+	          <h2>Class #<%=i+1%></h2>
+	          <p>What do you think about it?</p>
+	          <p>
+	          <script src="https://gist.github.com/mauricioaniche/<%=@classes[i]%>.js"></script>
+	          </p>
+	        </div>
+	      </div>
+
+	      <div class="row">
+
+		      <div class="col-md-12">
+		      <p>
+		      	In your opinion, does this class exhibit any design and/or implementation problem?
+		      	<br>
+
+		      	<input type="radio" name="c<%= i %>_hasproblem" value="true" /> YES
+		      	<input type="radio" name="c<%= i %>_hasproblem" value="false" /> NO
+		      </p>
+
+		      <p>
+			      If YES, please explain what are, in your opinion, the problems affecting the class.
+			      <br>
+			      <textarea name="c<%= i %>_problem"></textarea>
+		      </p>
+
+		      <p>
+				If YES, please rate the severity of the design and/or implementation problem by assigning a score:
+
+				<br>
+		      <input type="radio" value="1" name="c<%= i %>_severity"> Very low
+		      <input type="radio" value="1" name="c<%= i %>_severity"> Low
+		      <input type="radio" value="1" name="c<%= i %>_severity"> Medium
+		      <input type="radio" value="1" name="c<%= i %>_severity"> High
+		      <input type="radio" value="1" name="c<%= i %>_severity"> Very high
+
+		      </p>
+
+		      <p>
+			      In your opinion, does this class need to be refactored?
+			      <br>
+		      	<input type="radio" name="c<%= i %>_needrefactor" value="true" /> YES
+		      	<input type="radio" name="c<%= i %>_needrefactor" value="false" /> NO
+		      </p>
+
+
+		      <p>
+			      If YES, how would you refactor this class?
+
+					<br>
+			      <textarea name="c<%= i %>_refactoring"></textarea>
+		      </p>
+
+		      </div>
+	      </div>
+
+      </div>
+
+      <% end %>
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Thanks!</h2>
+          <p>
+          We appreciate your effort. If you want to keep posted about this
+          research, put your e-mail in the field below.
+
+          <br>
+          <input type="text" name="email">
+          </p>
+        </div>
+      </div>
+
+      <%= submit_tag("Submit", class: "btn btn-success") %>
+      <% end %>
+
+      <br><br><br><br><br><br><br>
+</div>
