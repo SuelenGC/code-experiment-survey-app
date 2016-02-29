@@ -67,13 +67,49 @@ class SurveyController < ApplicationController
       '22d09258dcf0c052d5b3'
     ] 
 
+    traditional = [
+      '8515daf09659c86bdcbc',
+      '6089cb090f0ea26b6d71',
+      '1a96890345f9d8bb70f5',
+      '12dc7258b0145206b50b',
+      '12449b0a9d59ec09e492',
+      '65d2424767221bd54e34',
+      'd48cc68beab6d41dffdf',
+      '7f6970e03c9e3e597e88',
+      '4675289298c47c33ca44',
+      'f4606aa339ec10fe03a6',
+      '8651d63a65bda738d1e1',
+      '5442f78592ce005c96bf',
+      '052e94681c42dea5b8c8',
+      'dec44b58fa5a0daf5ec4',
+      'e4b1849a39dd948263fb',
+      '07c348b2e42e86cd27ed',
+      'b7e2ae6018117b8049b0',
+      'f4526a345a0a52c3ca99',
+      '417386f3abdd61dc749a',
+      '037130c87425b34f32e5',
+      '15d5489eaa9f8c953d82',
+      'a4544d6a950863b2a690',
+      '31d93ec4abd621603a0f',
+      'a484f2c0625f7fd3b391',
+      '87a2b3659529e3094b6d',
+      'b77c7995fee961e302fd',
+      '3b4054c7483bad10d053',
+      '67092613c012914a04f4',
+      '86c0948a93685ab6bf0a',
+      '2e2ce9756eb080c2015f',
+      'c2a306f39fd82eaa3724'
+    ]
+
   	smelly_sample = smelly.sample(smelly.size)
   	non_smelly_sample = non_smelly.sample(non_smelly.size)
+    traditional_sample = traditional.sample(traditional.size)
 
   	smelly_to_be_evaluated = [smelly_sample[0], smelly_sample[1], smelly_sample[2]]
   	non_smelly_to_be_evaluated = [non_smelly_sample[0], non_smelly_sample[1], non_smelly_sample[2]]
+    traditional_to_be_evaluated = [traditional_sample[0], traditional_sample[1], traditional_sample[2]]
 
-  	@classes = smelly_to_be_evaluated + non_smelly_to_be_evaluated
+  	@classes = smelly_to_be_evaluated + non_smelly_to_be_evaluated + traditional_to_be_evaluated
   	@classes = @classes.sample(@classes.size)
 
   end
