@@ -89,7 +89,6 @@ class SurveyController < ApplicationController
       '417386f3abdd61dc749a',
       '15d5489eaa9f8c953d82',
       'a4544d6a950863b2a690',
-      '31d93ec4abd621603a0f',
       'a484f2c0625f7fd3b391',
       '87a2b3659529e3094b6d',
       'b77c7995fee961e302fd',
