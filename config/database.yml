@@ -6,31 +6,23 @@
 #
 default: &default
   adapter: mysql2
-  pool: 5
-  timeout: 5000
-  username: root
   encoding: utf8
+  host: android-survey.csmlcxz0rkff.us-east-1.rds.amazonaws.com
+  database: android_survey
+  username: root
+  password: android-survey-root
 
 development:
-  adapter: mysql2
-  database: sbes_survey_dev
-  pool: 5
-  timeout: 5000
-  username: root
-  encoding: utf8
+  <<: *default
 
 test:
-  adapter: mysql2
-  database: sbes_survey_test
-  pool: 5
-  timeout: 5000
-  username: root
-  encoding: utf8
+  <<: *default
+  
+sandbox:
+  <<: *default
+
+integration:
+  <<: *default
 
 production:
-  adapter: mysql2
-  database: sbes_survey_prod
-  pool: 5
-  timeout: 5000
-  username: root
-  encoding: utf8
+  <<: *default
