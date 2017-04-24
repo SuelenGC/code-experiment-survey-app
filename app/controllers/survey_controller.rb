@@ -33,38 +33,37 @@ class SurveyController < ApplicationController
       'b61e6825896b82d8db73',
       '82df0ea69516d4363847']
 
-  	non_smelly = 
-    [
-    '1799643048a43e4a684e',
-    'ab18b9ecb40e11e2ff4e',
-    '1baddc4042b5231075a5',
-    '8bdf3717ac4c6ebc76e1',
-    '1ebd7f4dd526f46ab12c',
-    '6096e619f522677ac556',
-    'ef784aac0822b3be4dbf',
-    'ca7eafecbe9fdfe1d536',
-    'e011e3c26e1279476aab',
-    '7605001ad814db8eefb9',
-    '853df378f5b54a1c59f5',
-    '2503e0005550ece5070d',
-    'e0a59cbcaff388050aa2',
-    '950a6a7bbfbed4cbec2e',
-    '5eb995d9c512b3dc2e58',
-    '3a94b9d4fa0345a4e90f',
-    '2d283ffcc07cc3b4966a',
-    '1b5bbf0371449befab96',
-    '1939990d07c0a4ac6ded',
-    '50f9307dbbe075322de5',
-    '082c4fae0a667e6f327b',
-    'eb00a01a3084470ad938',
-    'a2a147bd2cfb5e931928',
-    'cf398f6434fb936eb651',
-    'd6f1e97e9d282dad71b8',
-    '0ce4289556deb7512a02',
-    'bb6427e7dce52e0b4d99',
-    'f63a8768f795c57f1b2a',
-    'f78f25f7ea35c50d293c',
-    'b5acbbc96a68caeabdf9'
+  	non_smelly = [
+      '1799643048a43e4a684e',
+      'ab18b9ecb40e11e2ff4e',
+      '1baddc4042b5231075a5',
+      '8bdf3717ac4c6ebc76e1',
+      '1ebd7f4dd526f46ab12c',
+      '6096e619f522677ac556',
+      'ef784aac0822b3be4dbf',
+      'ca7eafecbe9fdfe1d536',
+      'e011e3c26e1279476aab',
+      '7605001ad814db8eefb9',
+      '853df378f5b54a1c59f5',
+      '2503e0005550ece5070d',
+      'e0a59cbcaff388050aa2',
+      '950a6a7bbfbed4cbec2e',
+      '5eb995d9c512b3dc2e58',
+      '3a94b9d4fa0345a4e90f',
+      '2d283ffcc07cc3b4966a',
+      '1b5bbf0371449befab96',
+      '1939990d07c0a4ac6ded',
+      '50f9307dbbe075322de5',
+      '082c4fae0a667e6f327b',
+      'eb00a01a3084470ad938',
+      'a2a147bd2cfb5e931928',
+      'cf398f6434fb936eb651',
+      'd6f1e97e9d282dad71b8',
+      '0ce4289556deb7512a02',
+      'bb6427e7dce52e0b4d99',
+      'f63a8768f795c57f1b2a',
+      'f78f25f7ea35c50d293c',
+      'b5acbbc96a68caeabdf9'
     ]
 
     traditional = [
@@ -114,7 +113,6 @@ class SurveyController < ApplicationController
 
   def save
   	a = Answer.new(:text => params)
-
   	a.save
   end
 end
