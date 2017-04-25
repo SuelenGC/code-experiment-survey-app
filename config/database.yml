@@ -5,11 +5,12 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql
+  adapter: mysql2
   encoding: utf8
+  host: android-survey.csmlcxz0rkff.us-east-1.rds.amazonaws.com
+  database: android_survey
   username: root
-  pool: 5
-  timeout: 5000
+  password: android-survey-root
 
 development:
   <<: *default
