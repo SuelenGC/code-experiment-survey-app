@@ -1,164 +1,148 @@
-
-
 <div class="container">
 
 	<h1>Android Survey</h1>
 
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Sua tarefa</h2>
-          <p>
-          Olá!
-          <br><br>
-          Obrigada por se juntar a nós nesta pesquisa. Nosso objetivo é entender melhor 
-          a qualidade do código e cheiros de código no front-end de aplicativos Android. 
-          Para isso, queremos que você avalie a qualidade do código de 6 códigos que extraímos 
-          de muitos projetos diferentes. A pesquisa deve demorar cerca de 15 minutos.
-          
-          <br><br>
-          No Android utilizamos diversos elementos para criar o front-end como Activities, 
-          Fragments, Adapters, XMLs de Layout, Styles, etc. Ao analisar a qualidade do 
-          código leve em consideração o elemento Android que está sendo abordado.
-          <br><br>
-          Se você perceber qualquer problema no código, nós te pedimos para escrever sobre 
-          seu raciocínio. Se tiver dúvidas, me avise.
-          <br><br>
-          Suelen Goularte Carvalho (suelengcarvalho no gmail dot com)
-          </p>
-        </div>
-      </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Sua tarefa</h2>
+      <p>
+        Olá!
+        <br><br>
+        Obrigada por se juntar a nós nesta pesquisa. Nosso objetivo é entender melhor 
+        a qualidade do código e cheiros de código no front-end de aplicativos Android. 
+        Para isso, queremos que você avalie a qualidade do código de 6 códigos que extraímos 
+        de muitos projetos diferentes. A pesquisa deve demorar cerca de 15 minutos.
 
-      <%= form_tag("/save", method: "post") do %>
+        <br><br>
+        No Android utilizamos diversos elementos para criar o front-end como Activities, 
+        Fragments, Adapters, XMLs de Layout, Styles, etc. Ao analisar a qualidade do 
+        código leve em consideração o elemento Android que está sendo abordado.
+        <br><br>
+        Se você perceber qualquer problema no código, nós te pedimos para escrever sobre 
+        seu raciocínio. Se tiver dúvidas, me avise.
+        <br><br>
+        Suelen Goularte Carvalho (suelengcarvalho no gmail dot com)
+      </p>
+    </div>
+  </div>
 
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Perfil</h2>
-          <p>
-          	What is your current position?<br>
-            <small>Examples are Professional software developer, Open Source Developer, Faculty, PhD student, Graduate student, Undergraduate student</small><br>
-            <input type="text" name="profile_position">
-          </p>
-          <p>
-          	How many years of experience in software development do you have?<br>
-          	<select name="profile_years_experience">
-          	<option value="Less than 1 year">Less than 1 year</option>
-          	<option value="1 to 2 years">1 to 2 years</option>
-          	<option value="2 to 4 years">2 to 4 years</option>
-          	<option value="4 to 6 years">4 to 6 years</option>
-          	<option value="6 to 8 years">6 to 8 years</option>
-          	<option value="8 to 10 years">8 to 10 years</option>
-          	<option value="More than 10 years">More than 10 years</option>
-          	</select>
-          </p>
-          <p>
-          	How many years of experience in Spring MVC do you have?<br>
-          	<select name="profile_years_springmvc">
-          	<option value="Less than 1 year">Less than 1 year</option>
-          	<option value="1 to 2 years">1 to 2 years</option>
-          	<option value="2 to 4 years">2 to 4 years</option>
-          	<option value="4 to 6 years">4 to 6 years</option>
-          	<option value="6 to 8 years">6 to 8 years</option>
-          	<option value="8 to 10 years">8 to 10 years</option>
-          	<option value="More than 10 years">More than 10 years</option>
-          	</select>
-          </p>
+  <%= form_tag("/save", method: "post") do %>
 
-          <p>
-          How many Spring MVC applications have you put in production?<br>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Perfil</h2>
+      <p>
+       Qual é a sua posição atual?<br>
+       <small>Exemplos são desenvolvedor de software profissional, desenvolvedor de código aberto, faculdade, estudante de doutorado, estudante de pós-graduação, graduação</small><br>
+       <input type="text" name="profile_position">
+     </p>
+     <p>
+       Quantos anos de experiência em desenvolvimento de software você tem?<br>
+       <select name="profile_years_experience">
+         <option value="Less than 1 year">Menos de 1 ano</option>
+         <option value="1 to 2 years">De 1 a 2 anos</option>
+         <option value="2 to 4 years">De 2 a 4 anos</option>
+         <option value="4 to 6 years">De 4 a 6 anos</option>
+         <option value="6 to 8 years">De 6 a 8 anos</option>
+         <option value="8 to 10 years">De 8 a 10 anos</option>
+         <option value="More than 10 years">Mais de 10 anos</option>
+       </select>
+     </p>
+     <p>
+       Quantos anos de experiência com desenvolvimento Android você tem?<br>
+       <select name="profile_years_springmvc">
+         <option value="Less than 1 year">Menos de 1 ano</option>
+         <option value="1 to 2 years">De 1 a 2 anos</option>
+         <option value="2 to 4 years">De 2 a 4 anos</option>
+         <option value="4 to 6 years">De 4 a 6 anos</option>
+         <option value="6 to 8 years">De 6 a 8 anos</option>
+         <option value="8 to 10 years">De 8 a 10 anos</option>
+         <option value="More than 10 years">Mais de 10 anos</option>
+       </select>
+     </p>
 
-          <input type="text" name="profile_apps_production">
-          </p>
-        </div>
-      </div>
+     <p>
 
-      <% for i in 0..@classes.size-1 do %>
-      <input type="hidden" name="c<%= i %>_gist" value="<%=@classes[i]%>">
-      <div class="evaluation">
-	      <div class="row">
-	        <div class="col-md-12">
-	          <h2>Class #<%=i+1%></h2>
-	          <p>
-            Abra este código em uma nova aba ou janela: <a href="https://gist.github.com/suelengc/<%=@classes[i]%>" target="_blank">https://gist.github.com/suelengc/<%=@classes[i]%></a>
-	          </p>
-	        </div>
-	      </div>
+      Quantos aplicativos Android nativo você já publicou?<br>
+      <small>Você pode considerar, por exemplo, aplicativos pessoais, de empresas que você trabalha ou trabalhou, projetos desenvolvidos para terceiros, desde que tenham sido publicados.</small><br>
+      <input type="text" name="profile_apps_production">
+    </p>
+  </div>
+</div>
 
-	      <div class="row">
+<% for i in 0..@classes.size-1 do %>
+<input type="hidden" name="c<%= i %>_gist" value="<%=@classes[i]%>">
+<div class="evaluation">
+ <div class="row">
+   <div class="col-md-12">
+     <h2>Class #<%=i+1%></h2>
+     <p>
+      Abra este código em uma nova aba ou janela: <a href="https://gist.github.com/suelengc/<%=@classes[i]%>" target="_blank">https://gist.github.com/suelengc/<%=@classes[i]%></a>
+    </p>
+  </div>
+</div>
 
-		      <div class="col-md-12">
-		      <p>
-		      	Na sua opinião, este código apresenta algum problema de design e/ou implementação?
-		      	<br>
+<div class="row">
 
-		      	<input type="radio" name="c<%= i %>_hasproblem" value="yes" /> SIM
-		      	<input type="radio" name="c<%= i %>_hasproblem" value="no" /> NÃO
-		      </p>
+  <div class="col-md-12">
+    <p>
+     Na sua opinião, este código apresenta algum problema de design e/ou implementação?
+     <br>
 
-		      <p>
-			      Se SIM, por favor explique quais são, na sua opinião, os problemas que afetam este código.
-			      <br>
-			      <textarea name="c<%= i %>_problem"></textarea>
-		      </p>
+     <input type="radio" name="c<%= i %>_hasproblem" value="yes" /> SIM
+     <input type="radio" name="c<%= i %>_hasproblem" value="no" /> NÃO
+   </p>
 
-		      <p>
-				
-          Se SIM, por favor avalie a severidade do problema de design e/ou implementação selecionando dentre as opções a seguir:
+   <p>
+     Se SIM, por favor explique quais são, na sua opinião, os problemas que afetam este código.
+     <br>
+     <textarea name="c<%= i %>_problem"></textarea>
+   </p>
 
-  				<br>
-		      <input type="radio" value="1" name="c<%= i %>_severity"> Muito baixa<br>
-		      <input type="radio" value="2" name="c<%= i %>_severity"> Baixa<br>
-		      <input type="radio" value="3" name="c<%= i %>_severity"> Média<br>
-		      <input type="radio" value="4" name="c<%= i %>_severity"> Alta<br>
-		      <input type="radio" value="5" name="c<%= i %>_severity"> Muito alta<br>
+   <p>
 
-		      </p>
+    Se SIM, por favor avalie a severidade do problema de design e/ou implementação selecionando dentre as opções a seguir:
+    <br>
+    <input type="radio" value="1" name="c<%= i %>_severity"> Muito baixa<br>
+    <input type="radio" value="2" name="c<%= i %>_severity"> Baixa<br>
+    <input type="radio" value="3" name="c<%= i %>_severity"> Média<br>
+    <input type="radio" value="4" name="c<%= i %>_severity"> Alta<br>
+    <input type="radio" value="5" name="c<%= i %>_severity"> Muito alta<br>
 
-		      <p>
-			     Na sua opinião, este código precisa ser refatorado?
-			      <br>
-		      	<input type="radio" name="c<%= i %>_needrefactor" value="yes" /> SIM
-		      	<input type="radio" name="c<%= i %>_needrefactor" value="no" /> NÃO
-		      </p>
+  </p>
 
-
-		      <p>
-            Se SIM, como você faria esta refatoração?
-					  <br>
-            <textarea name="c<%= i %>_refactoring"></textarea>
-		      </p>
-
-		      </div>
-  	      </div>
-
-        </div>
-
-      <% end %>
+  <p>
+    Na sua opinião, este código precisa ser refatorado?
+    <br>
+    <input type="radio" name="c<%= i %>_needrefactor" value="yes" /> SIM
+    <input type="radio" name="c<%= i %>_needrefactor" value="no" /> NÃO
+  </p>
 
 
-      <!-- <div class="row">
-        <div class="col-md-12">
-          <h2>Thanks!</h2>
-          <p>
-          We appreciate your effort. <strong>We are 
-          raffling a 30 euros Amazon gift card. Add your e-mail here to be
-          part of it</strong>.
-          <br>
-          <input type="text" name="email">
-          </p>
-        </div>
-      </div> -->
+  <p>
+    Se SIM, como você faria esta refatoração?
+    <br>
+    <textarea name="c<%= i %>_refactoring"></textarea>
+  </p>
 
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Obrigada!</h2>
-          <p>
-          Agradecemos imensamente pelo seu tempo e dedicação para responder este survey! 
-          </p>
-        </div>
-      </div>
+</div>
+</div>
 
-      <%= submit_tag("Enviar", class: "btn btn-success") %>
-      <% end %>
+</div>
 
-      <br><br><br><br><br><br><br>
+<% end %>
+
+<div class="row">
+  <div class="col-md-12">
+    <h2>Obrigada!</h2>
+    <p>
+      Agradecemos imensamente pelo seu tempo e dedicação para responder este survey! 
+    </p>
+  </div>
+</div>
+
+<%= submit_tag("Enviar", class: "btn btn-success") %>
+<% end %>
+
+<br><br>
 </div>
