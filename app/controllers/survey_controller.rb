@@ -54,28 +54,14 @@ class SurveyController < ApplicationController
       '34a951530aeeb9cb95a4198d2b39fec6'
     ]
 
-    traditional = [
-      'd41b736fce33720e946ea4d373e48be1',
-      '49f42e788c47438a3ca5038a5e81c98a',
-      'ae0a596d7702bec34a1137656ff2bd4a',
-      '7899cf2683a9312caa3e9a725ac37b0b',
-      'df497480bd317cbe16e24ca9ed2ae42e',
-      '88f0404098a0ec8482a2b9d648bb9116',
-      '96c25866c2103048014c1c0dfcd18916',
-      '94db31c1c3b6e00fa6e99056516218f0',
-      '6654db5c4c0ae7a52a3ade759130228a',
-      '5ed14f0056a0d236e21ade208e03900f'
-    ]
-
   	smelly_sample = smelly.sample(smelly.size)
   	non_smelly_sample = non_smelly.sample(non_smelly.size)
     traditional_sample = traditional.sample(traditional.size)
 
-  	smelly_to_be_evaluated = [smelly_sample[0], smelly_sample[1]]
-  	non_smelly_to_be_evaluated = [non_smelly_sample[0], non_smelly_sample[1]]
-    traditional_to_be_evaluated = [traditional_sample[0], traditional_sample[1]]
+  	smelly_to_be_evaluated = [smelly_sample[0], smelly_sample[1], smelly_sample[2]]
+  	non_smelly_to_be_evaluated = [non_smelly_sample[0], non_smelly_sample[1], non_smelly_sample[2]]
 
-  	@classes = smelly_to_be_evaluated + non_smelly_to_be_evaluated + traditional_to_be_evaluated
+  	@classes = smelly_to_be_evaluated + non_smelly_to_be_evaluated
   	@classes = @classes.sample(@classes.size)
 
   end
