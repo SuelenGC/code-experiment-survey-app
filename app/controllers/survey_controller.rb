@@ -56,8 +56,7 @@ class SurveyController < ApplicationController
 
   	smelly_sample = smelly.sample(smelly.size)
   	non_smelly_sample = non_smelly.sample(non_smelly.size)
-    traditional_sample = traditional.sample(traditional.size)
-
+    
   	smelly_to_be_evaluated = [smelly_sample[0], smelly_sample[1], smelly_sample[2]]
   	non_smelly_to_be_evaluated = [non_smelly_sample[0], non_smelly_sample[1], non_smelly_sample[2]]
 
