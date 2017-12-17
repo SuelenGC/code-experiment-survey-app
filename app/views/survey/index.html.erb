@@ -31,24 +31,17 @@
 
   <%= form_tag("/save", method: "post") do %>
 
-  <div class="card border-dark mb-3">
-    <div class="card-header">Header</div>
-    <div class="card-body text-dark">
-      <h4 class="card-title">Dark card title</h4>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-  </div>
 
-  <div class="card card-outline-primary">
-    <div class="card-block">
-      <h4 class="card-title">Perfil</h4> 
-      <h6 class="card-subtitle mb-2 text-muted">Antes de começarmos, nos conte um pouco sobre você.</h6>
+
+  <div class="row border">
+    <div class="ccol-md-12">
+      <h2 class="card-subtitle mb-2 text-muted">Antes de começarmos, nos conte um pouco sobre você.</h2>
     
-      <p class="card-text">Qual é a sua posição atual?<br>
+      <p>Qual é a sua posição atual?<br>
        <small>Exemplos: desenvolvedor de software, engenheiro de software, analista de sistemas, estudante de doutorado, estudante de pós-graduação, estudante de gradução</small><br>
        <input type="text" name="profile_position">
      </p>
-     <p class="card-text">
+     <p>
        Quantos anos de experiência em desenvolvimento de software você tem?<br>
        <select name="profile_years_experience">
          <option value="Less than 1 year">Menos de 1 ano</option>
@@ -60,7 +53,7 @@
          <option value="More than 10 years">Mais de 10 anos</option>
        </select>
      </p>
-     <p class="card-text">
+     <p>
        Quantos anos de experiência com desenvolvimento Android nativo você tem?<br>
        <select name="profile_years_android">
          <option value="Less than 1 year">Menos de 1 ano</option>
@@ -73,7 +66,7 @@
        </select>
      </p>
 
-     <p class="card-text">
+     <p>
       Quantos aplicativos Android nativo você já publicou?<br>
       <small>Você pode considerar, por exemplo, aplicativos pessoais, de empresas que você trabalha ou trabalhou, projetos desenvolvidos para terceiros, desde que tenham sido publicados.</small><br>
       <input type="text" name="profile_apps_production">
