@@ -1,6 +1,6 @@
 <div class="container">
 
-	<h1 class="center">Experimento de Código Android</h1>
+	<center><h1>Experimento de Código Android</h1></center>
 
   <div class="row alert alert-info" role="alert"> 
     <div class="col-md-12">
@@ -31,15 +31,16 @@
 
   <%= form_tag("/save", method: "post") do %>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h2>Antes de começarmos, nos conte um pouco sobre você:</h2>
-      <p>
-       Qual é a sua posição atual?<br>
+  <div class="card">
+    <div class="card-block">
+      <h4 class="card-title">Perfil</h4> 
+      <h6 class="card-subtitle mb-2 text-muted">Antes de começarmos, nos conte um pouco sobre você.</h6>
+    
+      <p class="card-text">Qual é a sua posição atual?<br>
        <small>Exemplos: desenvolvedor de software, engenheiro de software, analista de sistemas, estudante de doutorado, estudante de pós-graduação, estudante de gradução</small><br>
        <input type="text" name="profile_position">
      </p>
-     <p>
+     <p class="card-text">
        Quantos anos de experiência em desenvolvimento de software você tem?<br>
        <select name="profile_years_experience">
          <option value="Less than 1 year">Menos de 1 ano</option>
@@ -51,7 +52,7 @@
          <option value="More than 10 years">Mais de 10 anos</option>
        </select>
      </p>
-     <p>
+     <p class="card-text">
        Quantos anos de experiência com desenvolvimento Android nativo você tem?<br>
        <select name="profile_years_springmvc">
          <option value="Less than 1 year">Menos de 1 ano</option>
@@ -64,8 +65,7 @@
        </select>
      </p>
 
-     <p>
-
+     <p class="card-text">
       Quantos aplicativos Android nativo você já publicou?<br>
       <small>Você pode considerar, por exemplo, aplicativos pessoais, de empresas que você trabalha ou trabalhou, projetos desenvolvidos para terceiros, desde que tenham sido publicados.</small><br>
       <input type="text" name="profile_apps_production">
