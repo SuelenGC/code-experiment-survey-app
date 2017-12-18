@@ -2,8 +2,8 @@
 
 	<center><h1>Experimento de Código Android</h1></center>
 
-  <div class="row alert alert-warning" role="alert"> 
-    <!-- <div class="col-md-12"> -->
+  <div class="row"> 
+    <div class="col-md-12 alert alert-warning">
       <h2>Sua tarefa:</h2>
       <p>
         Olá! Meu nome é <b>Suelen Carvalho</b> e sou estudante de mestrado em <b>Ciência da Computação</b> pelo <b>Instituto de Matemática e Estatísticas</b> da <b>USP</b>. Eu pesquiso sobre qualidade de código Android.
@@ -20,7 +20,7 @@
         <hr>
         Qualquer dúvida, me envie um email (suelengcarvalho at gmail).
       </p>
-    <!-- </div> -->
+    </div>
   </div>
 
   <%= form_tag("/save", method: "post") do %>
@@ -28,7 +28,7 @@
 
 
   <div class="row">
-    <!-- <div class="col-md-12"> -->
+    <div class="col-md-12">
       <h2 class="bg-primary text-white" style="padding: 5px">Perfil</h2>
       <p>
         Email <br>
@@ -71,14 +71,14 @@
       <small>Você pode considerar, por exemplo, aplicativos pessoais, de empresas que você trabalha ou trabalhou, projetos desenvolvidos para terceiros, desde que tenham sido publicados.</small><br>
       <input type="text" name="profile_apps_production">
     </p>
-  <!-- </div> -->
+  </div>
 </div>
 
 <% for i in 0..@classes.size-1 do %>
 <input type="hidden" name="c<%= i %>_gist" value="<%=@classes[i]%>">
 <div class="evaluation">
  <div class="row">
-   <!-- <div class="col-md-12"> -->
+   <div class="col-md-12">
      <div class="p-3 mb-2 bg-primary text-white">
         <h2 style="padding: 5px">Código-Fonte #<%=i+1%></h2>
      </div>
@@ -116,7 +116,7 @@
 
   </p>
 
-<!-- </div> -->
+</div>
 </div>
 
 </div>
