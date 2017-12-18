@@ -1,6 +1,5 @@
 class SurveyController < ApplicationController
   def index
-
   	# add gists here
   	smelly = [
       '5314cc1203cc12fdb0c07aad11f74f65',
@@ -72,6 +71,7 @@ class SurveyController < ApplicationController
   end
 
   def save
+    puts params
   	a = Answer.new(:text => params)
   	a.save
   end
