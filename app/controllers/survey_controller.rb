@@ -71,12 +71,7 @@ class SurveyController < ApplicationController
   end
 
   def save
-    puts params
-    begin
-    	a = Answer.new(:text => params)
-    	a.save
-    rescue Exception => e 
-      puts "caught exception #{e}! ohnoes!"
-    end
+  	a = Answer.new(:text => params)
+  	a.save
   end
 end
