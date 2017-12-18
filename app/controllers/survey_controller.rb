@@ -1,3 +1,5 @@
+require 'logger'
+
 class SurveyController < ApplicationController
   def index
   	# add gists here
