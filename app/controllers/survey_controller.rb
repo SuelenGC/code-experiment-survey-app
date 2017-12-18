@@ -1,5 +1,3 @@
-require 'logger'
-
 class SurveyController < ApplicationController
   def index
   	# add gists here
@@ -74,7 +72,11 @@ class SurveyController < ApplicationController
 
   def save
     puts params
-  	a = Answer.new(:text => params)
-  	a.save
+    begin
+    	a = Answer.new(:text => params)
+    	a.save
+    rescue Exception => e 
+      puts "caught exception #{e}! ohnoes!"
+    end
   end
 end
