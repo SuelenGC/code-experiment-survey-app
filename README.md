@@ -6,11 +6,10 @@ This project is under Heroku
 ### Deploy
 `git push heroku master`
 
-
 ### Run migrations
 `heroku run rake db:migrate`
 
 ### Connect to database
-- Data base infos: `heroku pg:info`
-- Client do make queries: `heroku pg:psql`
-- Sair do clint: `\q [ENTER]`
+- Database infos: `heroku pg:info`
+- Client to make queries: `heroku pg:psql`
+- Quit psql client: `\q [ENTER]`
