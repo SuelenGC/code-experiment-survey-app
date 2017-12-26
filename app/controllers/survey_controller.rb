@@ -3,17 +3,8 @@ class SurveyController < ApplicationController
   	# add gists here
   	smelly = [
       '5314cc1203cc12fdb0c07aad11f74f65',
-      '0902b1f1103babda2b78a884bde7a616',
-      '66f9da1dc9ba73183f0d6eef10542ae1',
-      '6192ef359b23fde4c8f9a3454155b604',
-      'e4b0197cde11d7cfe1495246a218b008',
-      '298d7b5fe349000790170270144162c8',
-      'ef22d166e962d7ea6ab8233dc4dcdc2a',
       'd2f67a44ae30c69292182a8bf1e6812a',
-      '599c9c2f9d14b39c3c1d5a1278841ccb',
       '87eb0b690056eefde7cbeaab4339c1ee',
-      'c9cddbc1781c7227ebb6d7351f82eba4',
-      'ab538ce9e16aaf3df80c936bec07d20b',
       '4b0540bc573e1e9d0277a609eba1e8e8',
       '468eb14bdc4cb14af3681473f501d3b1',
       'f399d930dc04f1971debb7f4ecd55d85',
@@ -24,7 +15,6 @@ class SurveyController < ApplicationController
       'bd40e9a9bb1f0b3647d1bd35c6d87feb',
       '964f77f587cd51f1a269201499ceeb9d',
       '76bc7926bebc73ff1d475e239244fa4f',
-      'fdf1b57cace5e3b756d842d201b78095',
       'b1a4e52ea77ac1be174dd2bcef919dd5',
       '57335a2424ad70c8ffe97d1f53853296',
       'fbcbe2edabf73bb259e41a1b5ab57b6e',
@@ -41,21 +31,9 @@ class SurveyController < ApplicationController
 
   	non_smelly = [
       '18038e100fd16d5d18d44b01942ddde7',
-      'f62f6ffeb78201f592307f862fc11972',
-      'c5c03d821057a47ba3355e735de6d8dc',
-      '1411e67fba72915978aff2e38be3df80',
-      '9d2b341138b0eb6a79ea776c0325f6e8',
-      '2823e7a9f25bfe878609147b99efd57d',
-      '0802fc818241f23b71925e5e5981b435',
-      'ed10bff8bf7eb6e33d993e79d31edfdb',
-      'e7f69902916ce54765d7675a0b3bfdb7',
-      '93f6b2e9fb1d107add952257ecfabe32',
       'df97964a54f42e757c9532452a724f18',
       'a300c158eb5caed7dfe64c28e9f6afc1',
       '69ce601ad7e6e59d5d80010415118730',
-      'c27d80b69c3bd2ebebed1adc58e4b02e',
-      '068f54f6a053b0506e7b56ac982c4eff',
-      'b27a38d42f03aa0004cc7174f40c582f',
       'd73c16b575dd0470cf936d7e5478b7f6'
     ]
 
